@@ -1,0 +1,579 @@
+*{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background: url(../img/fondo.jpg) no-repeat center top;
+    background-size: cover;
+    font-family: sans-serif;
+    height: 100vh;
+    overflow: hidden;
+    color:#fff;
+  }
+  
+    
+  .login-box {
+    width: 320px;
+    height: 420px;
+    background: #383838;
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+    box-shadow: 10px 10px 25px #000; 
+  }
+  
+  .login-box .avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: -50px;
+    left: calc(50% - 50px);
+  }
+  
+  .login-box h1 {
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 22px;
+    font-family: Oswald,Arial;
+  }
+  
+  .login-box label {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    font-size: 1.1em;
+    display: block;
+  }
+  
+  .login-box input {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .login-box input[type="text"], .login-box input[type="password"] {
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .login-box input[type="submit"] {
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #b80f22;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+    transition: all 350ms;
+  }
+  
+  .login-box input[type="submit"]:hover {
+    cursor: pointer;
+    background: #ff2e2e;
+    color: #000;
+  }
+  
+  .login-box a {
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 20px;
+    color: darkgrey;
+  }
+  
+  .login-box a:hover {
+    color: #fff;
+  }
+  header{
+    top: 0;
+    left: 0;
+    position: absolute;
+    justify-content: center;
+    background-color:#383838;
+    width: 100%;
+    height: 50px;
+    color: #fff;
+    font-family:monospace;
+    font-weight: bold;
+    font-size: 1.8em;
+    box-shadow: 0px 0px 15px black;
+
+  }
+  .btn-adicionales{
+    color: #fff;
+    font-weight: bold;
+    font-family: monospace;
+    font-size: 1em;
+    cursor: pointer;
+    border: none;
+    width: 200px;
+    height: 50px;
+    position: absolute;
+    right: 5%;
+    background-color: #545454;
+  }
+  .menu:hover .menu_desplegable{
+    display: block;
+  }
+  header img{
+  
+    position: absolute;
+    right: 15px;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    background-color: #ccc;
+    border-radius: 7px;
+  }
+  
+  header img:hover{
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+  
+  
+  .Usuario_iniciado{
+    color: #fff;
+    font-size: 1.8em;
+    font-family: monospace;
+    position: absolute;
+    margin-top: -6%;
+    display: flex;
+    font-weight: bold;
+  }
+  
+
+  .menu_desplegable{
+    display: none;
+    top:50px;
+    width: 200px;
+    background-color: #333333;
+    margin-top:0;
+    position: absolute;
+    right: 5%;
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+    border-bottom: 1px solid #000;
+    cursor: pointer;
+    transition: all 550ms;
+
+  }
+  .menu_desplegable a{
+    color: #FFF;
+    font-family: monospace;
+    font-size: 15px;
+    display: block;
+    padding: 15px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    font-weight: bold;
+  }
+  .menu_desplegable a:hover{
+    background-color: #545454;
+    color: #b80f22;
+  }
+
+  .boleto_perdido{
+    margin-left: 2px;
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 250px;
+    height: 260px;
+    color: #fff;
+    font-family: monospace;
+    font-size: 1.5em;
+    text-align: center;
+    margin-top: 5px;
+    padding-top: 5px;
+    display: none;
+  }
+  .boleto_perdido select{
+    width: 80%;
+    height: 30px;
+    background-color: #181818;
+    color: #fff;
+
+  }
+  .boleto_perdido option{
+    background-color: #181818;
+    color: #fff;
+
+  }
+  .boleto_perdido option:hover{
+    background-color: #333333;
+    color: #ccc;
+
+  }
+  .boleto_perdido input[type="text"]{
+    width: 80%;
+    height: 30px;
+    margin-top: 10px;
+    outline:none;
+    border:none;
+    border-bottom: 1px solid #FFF;
+    background-color: transparent;
+    color: #FFF;
+  }
+  .boleto_perdido input[type="submit"]{
+    border: none;
+    outline: none;
+    width: 80%;
+    height: 35px;
+    background: #b80f22;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: all 350ms;
+
+  }
+  .boleto_perdido input[type="submit"]:hover{
+    background: #8d1221;
+    color: #000000;
+    
+  }
+  .boleto_perdido a{
+    margin-top: 10px;
+    display: block;
+    font-size: 12px;
+    text-decoration: none;
+    text-align: center;
+    color: #b80f22;
+    font-weight: bold;
+
+  }
+  .boleto_perdido a:hover{
+    color: #FFF;
+
+  }
+  
+  /*
+  esto es del reloj
+  */
+
+  .wrap{
+    width: 50%;
+    max-width: 1000px;
+    margin: auto;
+
+  }
+  .widget{
+    width: 100%;
+  }
+  .widget p{
+    display: inline-block;
+    line-height: 0.5em;
+    color: #fff;
+  }
+
+  .fecha{
+    margin-top: 10%;
+    font-family: Oswald,Arial;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 0.2em;
+    background: rgba(0,0,0,.5);
+    padding: 10px;
+    width: 100%;
+    height: auto;
+  }
+.reloj{
+  font-family: Oswald, Arial;
+  width: 100%;
+  font-size: 4rem;
+  text-align: center;
+  background: rgba(0,0,0,.5);
+}
+.reloj .caja-segundos{
+  display: inline-block;
+}
+.reloj .segundos,
+.reloj .ampm{
+  font-size: 1.5rem;
+  display: block;
+}
+
+/* Esto es el check de autos*/
+.registro{
+    width: 50%;
+    height: 150px;
+    background: #383838;
+    color: #fff;
+    top: 70%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    padding: 20px 30px;
+    
+
+}
+.grupo_formulario{
+  float: left;
+  margin-bottom: 20px;
+
+}
+.grupo_formulario label{
+  display: block;
+  text-align: center;
+  font-size: 1em;
+  font-weight: bold;
+  padding: 10px;
+}
+.grupo_formulario input[type="text"]{
+  display: block;
+  width:90%;
+  height: 30px;
+  font-size: 1em;
+  font-weight: bold;
+  margin-right: 10px;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  border-bottom: 2px solid #FFF;
+  color: #FFF;
+}
+.registro input[type="submit"]{
+  position: absolute;
+  padding: 10px;
+  background-color: #b80f22;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1em;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 2px 2px 7px #000;
+  transform: translate(-50%, -50%);
+  top: 100%;
+  left: 50%;
+  transition: all 350ms;
+}
+.registro input[type="submit"]:hover{
+  background-color: #8d1221;
+  color: #000;
+
+}
+
+.registro select{
+  margin-top: 5px;
+  margin-left: 1em;
+  text-align: center;
+  width: 65px;
+  height: 40px;
+  background: rgba(0, 0, 0, 0.2);
+  color: #fff;
+  font-size: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+
+}
+.registro select:hover {
+  background: rgba(0, 0, 0, 0.1);
+  color:#000 ;
+}
+.registro select option:checked {
+  background-color: #333333;
+  color: #181818;
+}
+/*cuadro de búsqueda*/
+.busqueda{
+
+  position: absolute;
+  left: 1px;
+  width: 250px;
+  height: 260px;
+  background-color: rgba(0, 0,0,0.9);
+  color: #FFF;
+  display: none;
+  padding: 20px;
+  transition: all 350ms;
+}
+.busqueda label{
+  
+  font-family: monospace;
+  font-size: 1.7em;
+  color: #F1F1F1;
+  display: block;
+  
+}
+.busqueda input[type="text"]{
+  width: 90%;
+  font-size: 1em;
+  color: #fff;
+  display: block;
+  margin-top:15px;
+  padding: 5px;
+  border:none;
+  background-color:transparent;
+  border-bottom: 1px solid #ffff;
+  outline: none;;
+}
+.busqueda input[type="submit"]{
+  height: 35px;
+  width: 90%;
+  margin-top: 15px;
+  border: none;
+  outline: none;
+  background-color: #b80f22;
+  border-radius: 5px;
+  color: #FFF;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 350ms;
+
+}
+.busqueda input[type="submit"]:hover{
+  background-color: #8d1221;
+  color: #000;
+
+}
+
+
+/*Salida*/
+.consultas_ticket {
+  margin-top: 10%;
+  width: 80%;
+  background-color: rgba(0, 0, 0, 0.9);
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px #000;
+
+}
+
+.consultas_ticket input[type="submit"]{
+  display: block;
+  margin: 0 auto;
+  margin-top: 5%;
+  margin-bottom:20px;
+  text-align: center;
+  outline: none;
+  height: 40px;
+  width: 140px;
+  background: #b80f22;
+  color: #fff;
+  font-style: bold;
+  font-size: 18px;
+  font-family: monospace;
+  border: none;
+  border-radius: 10px;
+  transition: all 350ms;
+  cursor: pointer;
+  box-shadow: 0 0 10px #000;
+
+}
+.consultas_ticket input[type="submit"]:hover{
+  background: #ff2e2e;
+  color: #000;
+}
+
+.tabla_registros_devueltos{
+  margin: 0 auto;
+  background-color: #333333;
+  width: 75%;
+  height: 75%;
+  align-items: center;
+  text-align: center;
+  background-color: #ccc;
+  color: #000;
+  overflow: scroll;
+  box-shadow: 0 0 0 10px #000;
+  
+
+}
+.tabla_registros_devueltos th{
+  margin-top: 5px;
+  text-align: center;
+  font-size: 14px;
+  padding: 10px;
+}
+.tabla_registros_devueltos table{
+  
+  display: flex;
+  margin: 0 auto;
+}
+.tabla_registros_devueltos td{
+  display: block;
+  border: 1px solid #000;
+  padding: 5px;
+
+}
+#titulo-tabla-registros_devueltos{
+  text-align: center;
+  font-family: monospace;
+  font-size: 3em;
+  font-weight: bold;
+  background-color: rgba(0,0,0,0.5);
+}
+.reporte{
+  top: 30%;
+  left: 50%;
+  text-align: center;
+  position: absolute;
+  transform: translate(-50%, -50%);
+
+}
+.reporte img{
+  border-radius: 50%;
+  width: 30%;
+  height: 30%;
+}
+.reporte p{
+  font-size: 2em;
+  font-weight: bold;
+
+}
+.reporte table th td{
+  left: 50%;
+  align-items: center;
+  justify-items: center;
+  border: 2px solid #fff;
+}
+.btn_regresar{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 100px;
+  height: 40px;
+  border-radius: 3px;
+  background-color: #b80f22;
+  justify-content: center;
+  text-align: center;
+  padding: 5px;
+  transition: all 350ms;
+  cursor: pointer;
+}
+.btn_regresar a{
+
+  font-family: monospace;
+  font-size: 2em;
+  text-decoration: none;
+  color: #F1F1F1;
+}
+.btn_regresar a:hover{
+  color: #333333;
+}
+.btn_regresar:hover{
+  background-color: #8d1221;
+  color: #333333;
+  font-weight: bold;
+  
+}
