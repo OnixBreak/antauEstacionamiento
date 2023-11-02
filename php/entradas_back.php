@@ -18,7 +18,7 @@ if($registrar_entrada){
 
         <script>
             window.open("../php/ticket/ticket_entrada.php", "_blank");
-            window.location = "../main.php";
+            window.location = "../index.php";
         </script>
         ';
 

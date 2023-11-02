@@ -10,7 +10,7 @@ $validar_login = mysqli_query($conexion, $queryinit);
 if(mysqli_num_rows($validar_login) > 0){
     $_SESSION['username'] = $userloged;
 
-    header("location: ../main.php");
+    header("location: ../index.php");
 
     exit;
 
@@ -18,7 +18,7 @@ if(mysqli_num_rows($validar_login) > 0){
     echo'
         <script>
         alert("Usuario o contraseña incorrectos!");
-        window.location = "../index.php";
+        window.location = "../login.php";
         </script>
         ';
         exit;

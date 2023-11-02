@@ -1,0 +1,630 @@
+/****************************************Código General****************************************/
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family:'Alarm_clock' ;
+    src: url('../fonts/alarm\ clock.ttf');
+    
+}
+@font-face {
+    font-family: 'Oswald';
+    src: url('../fonts/Oswald.ttf');
+}
+@font-face {
+    font-family: 'Oswald-regular';
+    src: url('../fonts/Oswald-Regular.ttf');
+}
+html{
+    height: 100%;
+}
+body{
+    background-attachment: fixed;
+    background-image: url('../img/fondo.jpg');
+    background-size: cover; /* Escala la imagen para cubrir todo el contenedor */
+    background-repeat: no-repeat; /* Evita la repetición de la imagen */
+    background-position: center;
+
+
+}
+.warnings{
+    width: 200px;
+    text-align: center;
+    margin: 0 auto;
+    color: #b80f22;
+    padding-top:20px;
+}
+.btn_regresar img{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 4.5em;
+    height: 3em;
+    top: 0.2em;
+    left: 0.2em;
+    border-radius: 0.5em;
+    border: none;
+    text-align: center;
+    padding: 0.5em;
+    font-size: 1.2em;
+}
+.btn_regresar img:hover{
+    background-color: rgba(255,255,255,0.7);
+
+}
+
+
+/****************************************Login****************************************/
+.grid_inicio_sesion{   
+    display: grid;
+    gap: 20px;
+    grid-template-areas: "inicio_sesion";
+    grid-template-rows: 100%;
+    
+
+}
+.inicio_sesion{
+    grid-area: "inicio_sesion";
+    background-color:#383838;
+    color: #FFF;
+    position: absolute;
+    width: 80%;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    display: flex; /* Activa el modelo de caja flexible para centrar verticalmente */
+    flex-direction: column; /* Alinea los elementos verticalmente uno encima del otro */
+    align-items: center;
+    padding: 20px;
+    box-shadow: 0 0 25px #000;
+
+}
+.inicio_sesion img{
+    position: absolute;
+    top: -50px;
+    left: calc(50% - 50px);
+    border-radius: 50%;
+    width: 100px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0px 0px 1em #000;
+}
+.inicio_sesion label{
+    margin-top: 1.5em;
+    display: block;
+    text-align: center;
+    font-family: Oswald-regular;
+    font-size: 2em;
+    font-weight: bold;
+}
+.inicio_sesion input[type="text"]{
+    margin: 0 auto;
+    display: block;
+    outline: none;
+    border: none;
+    width: 80%;
+    height: 40px;
+    background-color: transparent;
+    border-bottom: 1px solid #fff;
+    margin-bottom: 25px;
+    font-size: 1.5em;
+    color: #FFF;
+
+
+}
+.inicio_sesion input[type="password"]{
+    margin: 0 auto;
+    display: block;
+    outline: none;
+    border: none;
+    width: 80%;
+    height: 40px;
+    background-color: transparent;
+    border-bottom: 1px solid #FFF;
+    margin-bottom: 25px;
+    font-size: 2em;
+    box-shadow: rgba(0, 0, 0, 0.2) 0  4px 6px;
+    color: #FFF;
+
+
+}
+.inicio_sesion input[type="submit"]{
+    display: block;
+    margin: 0 auto;
+    background-color: #b80f22;
+    width: 80%;
+    height: 50px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #FFF;
+    cursor: pointer;
+    transition: all 350ms;
+}
+.inicio_sesion input[type="submit"]:hover{
+    margin-top: -1px;
+    width: 83%;
+    height: 55px;
+    font-size: 1.6em;
+    background-color: #8d1221;
+    color: #ababab;
+}
+/****************************************INDEX*****************************************/
+.grid-dashboard{   
+    display: grid;
+    gap: 5px;
+    grid-template-rows: 70px 150px 250px 250px 250px;
+    grid-template-areas: 
+    "navbar"
+    "reloj"
+    "ingresar_registro"
+    "buscar_registro"
+    "boleto_perdido";
+    ;
+}
+.navbar{
+    width: 100%;
+    position: fixed;
+    padding: 5px;
+    display: flex;
+    grid-area: navbar;
+    background-color: #000000;
+    box-shadow: 0 0 5px 0px #000;
+}
+.navbar p{
+    font-size: 1em;
+    display: block;
+    color: #FFF;
+    font-family: Oswald-regular;
+    margin-top: 0.5rem;
+    margin-left: 2rem;
+}
+.navbar img{
+    margin-left: 5px;
+    margin-top: 5px;
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+}
+#cerrar_sesion{
+    position: absolute;
+    right: 2rem;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    box-shadow: 0 0 10px #000;
+
+
+}
+#cerrar_sesion:hover{
+    background-color: rgba(255, 255, 255, 0.9);
+
+}
+
+/*reloj*/
+
+.wrap{
+    grid-area: reloj;
+    width: 90%;
+    margin: auto;
+
+  }
+  .widget{
+    width: 100%;
+    height: 100%;
+  }
+  .widget p{
+    display: inline-block;
+    line-height: 0.5em;
+    color: #fff;
+  }
+
+  .fecha{
+    font-family: Oswald-regular;
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 0.2em;
+    background: rgba(0,0,0,.5);
+    padding: 10px;
+    width: 100%;
+    height: auto;
+  }
+  .reloj{
+      font-family: Alarm_clock;
+      width: 100%;
+      height: auto;
+      font-size: 3.5em;
+      text-align: center;
+      background: rgba(0,0,0,.5);
+      padding: 10px;
+  } 
+
+.reloj .caja-segundos{
+  display: inline-block;
+}
+.reloj .segundos,
+.reloj .ampm{
+  font-size: 0.4em;
+  display: block;
+  margin-top: 10px;
+}
+/*Registros*/
+.ingresar_registro{
+    grid-area: ingresar_registro;
+}
+
+.forms{
+    width: 90%;
+    display: flex; /* Activa el modelo de caja flexible para centrar verticalmente */
+    flex-direction: column; /* Alinea los elementos verticalmente uno encima del otro */
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    margin: 0 auto;
+}
+.ingresar_registro p{
+    font-size: 1.5em;
+    font-family: monospace;
+    padding: 15px;
+    color: #FFF;
+}
+input[type="text"]{
+    width: 70%;
+    height: 30px;
+    margin-bottom: 10px;
+    background-color: transparent;
+    outline: none;
+    border:none;
+    border-bottom: 1px solid #FFF;
+    color: #FFF;
+    font-family: Oswald-regular;
+    font-size: 1em;
+}
+.ingresar_registro select{
+    width: 50%;
+    height: 25px;
+    border-radius: 5px;
+    background-color: #bdc3c7;
+    margin: 10px;
+    font-size: 1em;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+input[type="submit"]{
+    width: 80%;
+    height: 30px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 10px;
+    background-color: #b80f22;
+    color: #FFF;
+    font-weight: bold;
+    font-size: 1em;
+    cursor: pointer;
+    transition: all 350ms;
+}
+input[type="submit"]:hover{
+    background-color: #8d1221;
+    font-size: 1.2em;
+}
+.buscar_registro{
+    grid-area: buscar_registro;
+    color: #FFF;
+}
+.buscar_registro p{
+    margin-top: 15px;
+    font-size: 1.5em;
+    font-family: monospace;
+}
+.buscar_registro input{
+    margin-top:30px;
+    margin-bottom: 32px;
+}
+
+
+.boleto_perdido{
+    grid-area: boleto_perdido;
+    color: #FFF;
+}
+.boleto_perdido p{
+    margin-top: 20px;
+    font-size: 1.5em;
+    font-family: monospace;
+}
+.boleto_perdido input{
+    margin-top: 10px;
+    margin-bottom: 17px;
+}
+.boleto_perdido select{
+    width: 50%;
+    height: 25px;
+    border-radius: 5px;
+    background-color: #bdc3c7;
+    margin: 10px;
+    font-size: 1em;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+
+/* Grid Consultas*/
+
+.grid-consultas{
+    display:grid;
+    grid-template-rows: 100px auto;
+    grid-template-areas: 
+    "titulos"
+    "registros";
+    color: #FFF;
+}
+.titulos{
+    grid-area: titulos;
+    font-family: Oswald;
+    text-align: center;
+    margin: 0.5em;
+}
+.registros{
+    grid-area: registros;
+
+}
+.registros td ,th{
+    text-align: center;
+    padding: 5px;
+    border: 1px solid #FFF;
+}
+h2{
+    text-align: center;
+    font-size: 2rem;
+    font-family: Oswald;
+}
+/****************************************BUSCAR_TICKET****************************************/
+.grid_datos_validar{
+    display: grid;
+    gap: 2em;
+    grid-template-areas:
+    "titulo_validar_datos"
+    "formulario_datos_validar";
+    grid-template-rows: 150px auto;
+
+}
+
+.titulo_validar{
+    grid-area: titulo_validar_datos;
+    justify-content: center;
+    text-align: center;
+    font-family: oswald;
+    color: #FFF;
+
+}
+.titulo_validar h1{
+    margin-top: 0.5em;
+}
+
+
+.tabla_datos_validar{
+    grid-area: formulario_datos_validar;
+}
+.consultas_ticket{
+    margin: 0 auto;
+    text-align: center;
+    display: block;
+    width: 90%;
+    background-color: rgba(0, 0, 0, 0.7);
+
+}
+.consultas_ticket label{
+    display: block;
+    color: #FFF;
+    font-family: oswald;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+/****************************************BOLETO PERDIDO****************************************/
+.grid_boleto_perdido{
+    display: grid;
+    gap: 1.5em;
+    grid-template-rows: 100px 450px;
+    grid-template-areas:
+    "titulo_boleto_perdido"
+    "datos_boleto_perdido";
+}
+.titulo_boleto_perdido{
+    grid-area: titulo_boleto_perdido;
+    text-align: center;
+    margin-top: 2em;
+    font-size: 2em;
+    font-family: oswald;
+    font-weight: bold;
+    color: #fff;
+}
+.datos_boleto_perdido{
+    grid-area: datos_boleto_perdido;
+}
+.tabla_registros_devueltos{
+    background-color: #ababab;
+    margin: 0 auto;
+    width: 90%;
+    height: 100%;
+    text-align: center;
+    background-color: #ccc;
+    color: #000;
+    overflow: scroll;
+    box-shadow: 0 0  10px #000;
+    font-family: oswald;
+}
+.tabla_registros_devueltos table td{
+    font-family:monospace ;
+    border: 1px solid #000;
+}
+/****************************************REPORTE DE TURNO****************************************/
+.grid_reporte{
+    display: grid;
+    gap: 1em;
+    grid-template-rows: 10em 15em 10em;
+    grid-template-areas: 
+    "titulo_turno"
+    "registros_turno"
+    "footer_turno";
+}
+.title_turno{
+    grid-area: titulo_turno;
+    font-family: oswald;
+    padding: 1em;
+
+
+}
+.title_turno img{
+    width: 6em;
+    margin: 0 auto;
+    display: block;
+    border-radius: 50%;
+}
+.title_turno h1{
+    text-align: center;
+    color: #fff;
+
+}
+.registros_turno{
+    grid-area: registros_turno;
+    margin: 0 auto;
+    text-align: center;
+    width: 90%;
+    height: 15em;
+    background-color: #e7e7e7;
+    box-shadow: 0 0 1em #000;
+    overflow: scroll;
+}
+.registros_turno table td{
+    margin: 0 auto;
+    padding: 0.5em;
+    text-align: center;
+    border: 1px solid #000;
+}
+.footer_turno{
+    grid-area: footer_turno;
+    text-align: center;
+    font-family: oswald;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+
+
+/****************************************MEDIA QUERY****************************************/
+@media( min-width: 600px){
+    /*login*/
+    .inicio_sesion{
+        width: 60%;
+    }
+    .tabla_registros_devueltos{
+        width: 70%;
+    }
+    /*obtener_datos*/
+    .consultas_ticket{
+        width: 60%;
+    }
+    /*reporte de turno*/
+    .registros_turno{
+        width: 75%;
+        font-size: 1.2em;
+    }
+    .grid_reporte{
+        grid-template-rows: auto 17em 10em;
+    }
+    /*index*/
+    .grid-dashboard{
+        grid-template-rows: 70px 200px 250px;
+        grid-template-areas: 
+        "navbar navbar"
+        "reloj reloj"
+        "ingresar_registro buscar_registro"
+        "boleto_perdido boleto_perdido";
+    }
+    .fecha{
+        font-size: 1.9em;
+    }
+    
+
+}
+
+@media ( min-width: 900px){
+    body{
+        overflow: hidden;
+    }
+    .title_turno{
+        font-size: 1em;
+    }
+    .title_turno img {
+        width: 3em;
+
+    }
+    .title_turno img {
+        width: 7em;
+
+    }
+    .registros_turno{
+        width: 40%;
+        height: 15em;
+    }
+    /*Login*/
+    .inicio_sesion{
+        width: 35%;
+    }
+    /*obtener datos*/
+    .tabla_registros_devueltos{
+        width: 60%;
+    }
+    /*Index*/
+    .grid-dashboard{
+        
+        grid-template-rows: 65px 250px 250px;
+        gap: 10px;
+        grid-template-areas:
+        "navbar navbar navbar"
+        "reloj reloj reloj"
+        "ingresar_registro buscar_registro boleto_perdido";
+    
+
+    }
+    .fecha{
+        padding: 1em;
+        font-size: 2.5em;
+    }
+    .reloj{
+        font-size: 5em;
+    }
+    .consultas_ticket{
+        width: 40%;
+    }
+
+}
+@media ( min-width: 1250px){
+    /*Login*/
+    .inicio_sesion{
+        width: 25%;
+    }
+    /*Index*/
+    .grid-dashboard{
+        gap: 15px
+    }
+    .consultas_ticket{
+        width: 40%;
+    }
+    /*obtener datos*/
+    .tabla_registros_devueltos{
+        width: 40%;
+    }
+
+}

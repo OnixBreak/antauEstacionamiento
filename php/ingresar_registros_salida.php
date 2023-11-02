@@ -45,7 +45,7 @@ $precioTotal = $costoTotal;
 
 include 'conexion_back.php';
 $query = "SELECT * FROM entradas WHERE folio_entradas=$folio_salida";
-
+$query_delete = "DELETE FROM entradas WHERE folio_entradas=$folio_salida";
 $consulta = mysqli_query($conexion,$query);
 
 $rows = $consulta->fetch_assoc();
@@ -77,11 +77,12 @@ $query_insert = "INSERT INTO
                   '$salida_auto_hora',
                   '$precioTotal')";
 $insert = mysqli_query($conexion,$query_insert);
+$delete = mysqli_query($conexion,$query_delete);
 if($insert){
     echo'
 
         <script>
-            window.location = "../main.php";
+            window.location = "../index.php";
             window.open("ticket/ticket_salida.php", "_blank");
         </script>
         ';

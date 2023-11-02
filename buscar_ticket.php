@@ -18,7 +18,7 @@ if($consultar_datos->num_rows >0){
 }
 else{
     echo "<script>alert('No se encontraron resultados!');</script>";
-    header("location: ./main.php");
+    header("location: ./index.php");
     exit;
 }
 mysqli_close($conexion);
@@ -27,32 +27,42 @@ mysqli_close($conexion);
 <html>
     <head>
     <meta charset="utf-8"/>
-    <link rel="stylesheet" href="./css/main.css" type="text/css"/>
+    <link rel="stylesheet" href="./css/style.css" type="text/css"/>
     <link rel="shortcut icon" href="img/icono.ico"/>
 
         <title>Validar salida</title>
     </head> 
     <body>
-        <div class="btn_regresar">
-        <a href="main.php"><<</a>
-        </div>
-            <div class="consultas_ticket">
-                <form  action="php/ingresar_registros_salida.php" method="POST">
-                    <h1>Atiende: <?php echo $row['nombreCompleto'];?></h1>
-                            <label for="tabla_folio">Folio</label>
-                            <input type="text" id="tabla_folio" name="tabla_folio" value="<?php echo $folio_a_buscar?>" readonly>
-                            <label for="tabla_placa">Placa</label>
-                            <input type="text" id="tabla_placa" name="tabla_placa" value="<?php echo $tabla_placa?>" readonly>
-                            <label for="tabla_tipo_vehiculo">Tipo de Vehículo</label>
-                            <input type="text" id="tabla_tipo_vehiculo" name="tabla_tipo_vehiculo" value="<?php echo $tipo_auto?>" readonly>
-                            <label for="tabla_hora_entrada">Hora de entrada</label>
-                            <input type="text" id="tabla_hora_entrada" name="tabla_hora_entrada" value="<?php echo $tabla_hora_entrada?>" readonly>
-                    <input type="submit" id="ingresar_registros_salidabtn" value="Pagar">
-                </form>
+        <div class="grid_datos_validar">
+            <div class="btn_regresar">
+                <a href="index.php">
+                    <img src="img/atras.png" alt="Regresar">
+                </a>
+                </div>
+                
+
+            <div class="titulo_validar">
+                <h1>Atiende:</h1><h1><?php echo $row['nombreCompleto'];?></h1>
             </div>
-    
+            <div class="tabla_datos_validar">
+                <div class="consultas_ticket">
+                    <form  action="php/ingresar_registros_salida.php" method="POST">
+                        
+                                <label for="tabla_folio">Folio</label>
+                                <input type="text" id="tabla_folio" name="tabla_folio" value="<?php echo $folio_a_buscar?>" readonly>
+                                <label for="tabla_placa">Placa</label>
+                                <input type="text" id="tabla_placa" name="tabla_placa" value="<?php echo $tabla_placa?>" readonly>
+                                <label for="tabla_tipo_vehiculo">Tipo de Vehículo</label>
+                                <input type="text" id="tabla_tipo_vehiculo" name="tabla_tipo_vehiculo" value="<?php echo $tipo_auto?>" readonly>
+                                <label for="tabla_hora_entrada">Hora de entrada</label>
+                                <input type="text" id="tabla_hora_entrada" name="tabla_hora_entrada" value="<?php echo $tabla_hora_entrada?>" readonly>
+                        <input type="submit" id="ingresar_registros_salidabtn" value="Pagar">
+                    </form>
+                </div>
+
+            </div>
+        </div>
     </body>
-    <!--<script src="scripts/calc.js"></script>-->
 </html>
 
 
