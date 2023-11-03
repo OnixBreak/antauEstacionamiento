@@ -30,11 +30,12 @@ body{
 
 }
 .warnings{
-    width: 200px;
+    display: none;
     text-align: center;
     margin: 0 auto;
     color: #b80f22;
-    padding-top:20px;
+    padding-top:1px;
+    margin-top: 0;
 }
 .btn_regresar img{
     position: absolute;
@@ -485,7 +486,7 @@ h2{
 
 }
 .title_turno img{
-    width: 6em;
+    width: 5em;
     margin: 0 auto;
     display: block;
     border-radius: 50%;
@@ -493,6 +494,7 @@ h2{
 .title_turno h1{
     text-align: center;
     color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
 
 }
 .registros_turno{
@@ -504,6 +506,12 @@ h2{
     background-color: #e7e7e7;
     box-shadow: 0 0 1em #000;
     overflow: scroll;
+    font-family: monospace;
+}
+.registros_turno th{
+    font-weight: bold;
+    background-color: #8d1221;
+
 }
 .registros_turno table td{
     margin: 0 auto;
@@ -537,11 +545,11 @@ h2{
     }
     /*reporte de turno*/
     .registros_turno{
-        width: 75%;
+        width: 80%;
         font-size: 1.2em;
     }
     .grid_reporte{
-        grid-template-rows: auto 17em 10em;
+        grid-template-rows: auto 12.5em 10em;
     }
     /*index*/
     .grid-dashboard{
@@ -575,7 +583,7 @@ h2{
 
     }
     .registros_turno{
-        width: 40%;
+        width: 60%;
         height: 15em;
     }
     /*Login*/

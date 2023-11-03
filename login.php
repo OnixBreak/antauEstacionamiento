@@ -22,8 +22,10 @@ if(isset($_SESSION['username'])){
             <img src="img/icono_inicio_sesion.jpg" alt="Logotipo">
             <label for="username">Usuario:</label>
             <input id="username" name="username" type="text"  autocomplete="off">
+            <span class="warnings" id="mensaje_user" name="mensaje_user">Escribe tu usuario!</span>
             <label for="password">Contraseña:</label>
             <input  id="password" name="password" type="password"name="pass_inicio_sesion" id="pass_inicio_sesion" autocomplete="off">
+            <span class="warnings" name="msg_pass" id="msg_pass">Escribe tu Contraseña!</span>
             <input type="submit" value="Iniciar Sesión">
             
         </form>
