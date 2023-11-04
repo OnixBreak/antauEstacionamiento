@@ -83,6 +83,27 @@ body{
     box-shadow: 0 0 25px #000;
 
 }
+.btn{
+
+    width: 100px;
+    padding: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    margin-right: 3em;
+    border: none;
+    border-radius: 0.5em;
+    background-color: #8d1221;
+    
+    cursor: pointer;
+    box-shadow: 0 0 0.5em #000;
+    transition: all 400ms;
+
+}
+.btn:hover{
+    background-color: #b80f22;
+    color: #000;
+}
 .inicio_sesion img{
     position: absolute;
     top: -50px;
@@ -435,7 +456,7 @@ h2{
 .grid_boleto_perdido{
     display: grid;
     gap: 1.5em;
-    grid-template-rows: 100px 450px;
+    grid-template-rows: 200px 350px;
     grid-template-areas:
     "titulo_boleto_perdido"
     "datos_boleto_perdido";
@@ -549,7 +570,7 @@ h2{
         font-size: 1.2em;
     }
     .grid_reporte{
-        grid-template-rows: auto 12.5em 10em;
+        grid-template-rows: auto 13em 10em;
     }
     /*index*/
     .grid-dashboard{

@@ -21,11 +21,14 @@ if(!isset($_SESSION['username'])){
     <link rel="shortcut icon" href="img/icono.ico" type="image/x-icon">
 </head>
 <body>
+<div class="btn_regresar">
+                <a href="index.php">
+                    <img src="img/atras.png" alt="Regresar">
+                </a>
+                </div>
     <div class="grid_reporte">
             <div class="title_turno">
                 <img src="img/logo.jpg">
-                
-                <a href="php/cerrar_sesion.php">Cerrar Sesión</a>
                 <h1 id="usuario">Registros de: <?php echo $_SESSION['username'] ?></h1>
             </div>
         <div class="registros_turno">
@@ -72,7 +75,7 @@ if(!isset($_SESSION['username'])){
         </div>
         
         <div class="footer_turno">
-        <button id="pdf_turno">Generar PDF</button>
+        <button id="pdf_turno" class="btn">Generar PDF</button><a href="php/cerrar_sesion.php"><button class="btn" id="cerrar_sesionbtn" class="btn">Cerrar Sesión</button></a>
             <p>Registros totales: <?php echo $cantidad_campos?></p>
         <p>Dinero en caja: <?php echo '$ '.$suma.'.00';?></p>
     

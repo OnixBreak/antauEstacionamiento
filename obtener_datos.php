@@ -26,10 +26,14 @@ if(!isset($_SESSION['username'])){
         <a href="index.php">
         <img src="img/atras.png" alt="Regresar">
         </a>
+
     </div>
     <div class="grid_boleto_perdido">
         <div class="titulo_boleto_perdido">
+        
             <p>Estos registros han sido encontrados</p>
+            <button class="btn" id="ticket_boleto_perdido">Imprimir Aviso!</button>
+            
         </div>
         <div class="datos_boleto_perdido">
             <div class="tabla_registros_devueltos">
@@ -48,10 +52,6 @@ if(!isset($_SESSION['username'])){
             $consulta_boleto_perdido = "SELECT * FROM entradas";
             $select_boletoperdido_buscar = $_POST['buscar_por'];
             $valor_boletoperdido_buscar = $_POST['boleto_perdido_descrip'];
-            
-            if($select_boletoperdido_buscar ==""){
-               $select_boletoperdido_buscar = "verregistros"; 
-            }
             if($valor_boletoperdido_buscar ==""){
                 $select_boletoperdido_buscar="verregistros";
             }
@@ -99,6 +99,8 @@ if(!isset($_SESSION['username'])){
                 </table>
                 </div>
         </div>
+
 </div>
+<script src="scripts/btnperdido.js"></script>
 </body>
 </html>
