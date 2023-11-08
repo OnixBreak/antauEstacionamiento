@@ -1,44 +1,56 @@
+const expresiones = {
+    usuario: /^[a-zA-Z0-9]{3,20}$/,
+    pass: /^[a-zA-Z0-9]{8,20}$/
+}
+
 const usuario = document.getElementById('username');
 const pass = document.getElementById('password');
 const form = document.getElementById('form_login');
 const msguser = document.getElementById('mensaje_user');
 const msgpass = document.getElementById('msg_pass');
 
-usuario.addEventListener('blur',function(e){
-    if(usuario.value.length == 0){
-        msguser.style.display = 'block';
+usuario.addEventListener('blur', (e)=>{
+    if(expresiones.usuario.test(usuario.value)){
+        document.getElementById('username').style.color = "#FFF";
+        msguser.style.display = 'none';
     }
     else{
-        msguser.style.display = 'none';
+        document.getElementById('username').style.color = "red";
+        msguser.style.display = 'block';
 
     }
 });
 
-pass.addEventListener('blur', function(e){
-    if(pass.value.length == 0){
+
+usuario.addEventListener('keyup', (e) =>{
+    if(expresiones.usuario.test(usuario.value)){
+        document.getElementById('username').style.color = "#FFF";
+        msguser.style.display = 'none';
+    }
+    else{
+        document.getElementById('username').style.color = "red";
+
+    }
+});
+
+pass.addEventListener('blur', (e) =>{
+    if(expresiones.pass.test(pass.value)){
+        document.getElementById('password').style.color = "#FFF";
+        msgpass.style.display = 'none';
+    }
+    else{
+        document.getElementById('password').style.color = "red";
         msgpass.style.display = 'block';
     }
-    else{
-        msgpass.style.display = 'none';
-
-    }
 });
 
-usuario.addEventListener('keyup',function(e){
-    if(usuario.value.length == 0){
-        msguser.style.display = 'block';
-    }
-    else{
-        msguser.style.display = 'none';
-
-    }
-});
-pass.addEventListener('keyup', function(e){
-    if(pass.value.length == 0){
-        msgpass.style.display = 'block';
-    }
-    else{
+pass.addEventListener('keyup', (e)=>{
+    if(expresiones.pass.test(pass.value)){
+        document.getElementById('password').style.color = "#FFF";
         msgpass.style.display = 'none';
+    }
+    else{
+        document.getElementById('password').style.color = "red";
 
     }
 });

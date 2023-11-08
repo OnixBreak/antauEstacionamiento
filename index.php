@@ -64,12 +64,15 @@ $usuario = $_SESSION['username'];
         <form class="forms" action="php/entradas_back.php" method="POST" id="form_registro" name="form_registro">
             <p>Ingresar un Registro</p>
             <input type="text" placeholder="Placa" id="placAuto" name="placAuto" autocomplete="off" onkeyup="mayus(this);">
+            <span id="p_plac" class="warnings">Solo letras y números</span>
             <input type="text" name="color_marca" id="color_marca" placeholder="Modelo Color" autocomplete="off" onkeyup="mayus(this);">
+            <span id="p_color" class="warnings">Solo letras</span>
             <select name="tipVehiculo" id="tipVehiculo">
-                <option value="A">A</option>
-                <option value="B">B</option>
-                <option value="C">C</option>
-                <option value="D">D</option>
+                <option value="A">Automovil</option>
+                <option value="B">Camioneta</option>
+                <option value="C">Camioneta 3 1/2</option>
+                <option value="D">Camión</option>
+                <option value="E">Motocicleta</option>
                 <option value="Pension">Pensión</option>
             </select>
             <input type="submit" value="Ingresar Registro" id="imp_ticket_entrada" name="imp_ticket_entrada">
@@ -80,6 +83,7 @@ $usuario = $_SESSION['username'];
             <form class="forms" action="buscar_ticket.php" method="POST" name="form_validar" id="form_validar">
                 <p>Buscar Folio</p>
                 <input name="folio_a_buscar" id="folio_a_buscar" type="text" placeholder="Folio" autocomplete="off">
+                <span id="val" class="warnings">Solo números!</span>
                 <input type="submit" value="Buscar">
             </form>
         </div>
@@ -95,8 +99,16 @@ $usuario = $_SESSION['username'];
             <input type="submit" value="Buscar">
             </form>
         </div>
+        <div class="reimpresión_ticket">
+        <form  id="form_print"class="forms" action="php/ticket/reimprimir_ticket.php" method="POST">
+            <label for="reimpresion">Reimprimir Ticket</label>
+            <input type="text" name="reimpresion" id="reimpresion" placeholder="Folio" autocomplete="off">
+            <span id="print" class="warnings">Solo números</span>
+            <input type="submit" value="Imprimir">
+        </form>
+        </div>
     </div>
-</body>
-<script src="scripts/reloj.js"></script>
+    <script src="scripts/reloj.js"></script>
 <script src="scripts/funct.js"></script>
+</body>
 </html>

@@ -179,14 +179,15 @@ body{
 /****************************************INDEX*****************************************/
 .grid-dashboard{   
     display: grid;
-    gap: 5px;
-    grid-template-rows: 70px 150px 250px 250px 250px;
+    gap: 1em;
+    grid-template-rows: 80px 150px 250px 250px 250px 250px;
     grid-template-areas: 
     "navbar"
     "reloj"
     "ingresar_registro"
     "buscar_registro"
-    "boleto_perdido";
+    "boleto_perdido"
+    "reimpresion";
     ;
 }
 .navbar{
@@ -199,12 +200,12 @@ body{
     box-shadow: 0 0 5px 0px #000;
 }
 .navbar p{
-    font-size: 1em;
+    font-size: 0.6em;
     display: block;
     color: #FFF;
     font-family: Oswald-regular;
     margin-top: 0.5rem;
-    margin-left: 2rem;
+    margin-left: 1rem;
 }
 .navbar img{
     margin-left: 5px;
@@ -251,7 +252,7 @@ body{
   .fecha{
     font-family: Oswald-regular;
     text-align: center;
-    font-size: 1.5em;
+    font-size: 1em;
     margin-bottom: 0.2em;
     background: rgba(0,0,0,.5);
     padding: 10px;
@@ -262,7 +263,7 @@ body{
       font-family: Alarm_clock;
       width: 100%;
       height: auto;
-      font-size: 3.5em;
+      font-size: 2.5em;
       text-align: center;
       background: rgba(0,0,0,.5);
       padding: 10px;
@@ -409,6 +410,23 @@ h2{
     font-size: 2rem;
     font-family: Oswald;
 }
+
+.reimpresión_ticket{
+    grid-area: reimpresion;
+}
+.reimpresión_ticket label{
+    font-size: 1.5em;
+    font-family: monospace;
+    color: #FFF;
+    margin-top: 20px;
+    margin-bottom: 55px;
+
+}
+.reimpresión_ticket input[type="submit"]{
+    margin-top: 35px;
+    margin-bottom: 20px;
+}
+
 /****************************************BUSCAR_TICKET****************************************/
 .grid_datos_validar{
     display: grid;
@@ -579,10 +597,16 @@ h2{
         "navbar navbar"
         "reloj reloj"
         "ingresar_registro buscar_registro"
-        "boleto_perdido boleto_perdido";
+        "boleto_perdido reimpresion";
     }
     .fecha{
         font-size: 1.9em;
+    }
+    .reloj p{
+        font-size:3.5rem;
+    }
+    .navbar p{
+        font-size: 1em;
     }
     
 
@@ -618,12 +642,12 @@ h2{
     /*Index*/
     .grid-dashboard{
         
-        grid-template-rows: 65px 250px 250px;
+        grid-template-rows: 70px 270px 270px;
         gap: 10px;
         grid-template-areas:
-        "navbar navbar navbar"
-        "reloj reloj reloj"
-        "ingresar_registro buscar_registro boleto_perdido";
+        "navbar navbar navbar navbar"
+        "reloj reloj reloj reloj"
+        "ingresar_registro buscar_registro boleto_perdido reimpresion";
     
 
     }
@@ -646,7 +670,7 @@ h2{
     }
     /*Index*/
     .grid-dashboard{
-        gap: 15px
+        gap: 1.5em;
     }
     .consultas_ticket{
         width: 40%;
@@ -654,6 +678,12 @@ h2{
     /*obtener datos*/
     .tabla_registros_devueltos{
         width: 40%;
+    }
+    .fecha{
+        font-size: 1.9em;
+    }
+    .reloj p{
+        font-size: 1.5em;
     }
 
 }

@@ -10,7 +10,7 @@ if(isset($_SESSION['username'])){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="/img/icono.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="img/icono.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
     <title>Iniciar Sesión</title>
 </head>
@@ -19,13 +19,13 @@ if(isset($_SESSION['username'])){
         
     <div class="inicio_sesion">
         <form action="php/login_back.php" method="POST" id="form_login" name="form_login">
-            <img src="img/icono_inicio_sesion.jpg" alt="Logotipo">
+            <img src="img/logo.jpg" alt="Logotipo">
             <label for="username">Usuario:</label>
             <input id="username" name="username" type="text"  autocomplete="off">
-            <span class="warnings" id="mensaje_user" name="mensaje_user">Escribe tu usuario!</span>
+            <span class="warnings" id="mensaje_user" name="mensaje_user">Sin caracteres especiales</span>
             <label for="password">Contraseña:</label>
             <input  id="password" name="password" type="password"name="pass_inicio_sesion" id="pass_inicio_sesion" autocomplete="off">
-            <span class="warnings" name="msg_pass" id="msg_pass">Escribe tu Contraseña!</span>
+            <span class="warnings" name="msg_pass" id="msg_pass">sin caracteres especiales</span>
             <input type="submit" value="Iniciar Sesión">
             
         </form>

@@ -18,7 +18,7 @@
     $pdf->MultiCell(0,5,utf8_decode(strtoupper("Antau II\nEstacionamiento")),0,'C',false);
     $pdf->SetFont('Arial','',9);
     //$pdf->MultiCell(0,5,utf8_decode("RUC: 0000000000"),0,'C',false);  Así va todo el contenido
-    $pdf->MultiCell(0,5,utf8_decode("Direccion: 12 Oriente #409 A\nCol. Centro Puebla, Pue. CP 72000"),0,'C',false);
+    $pdf->MultiCell(0,5,utf8_decode("Direccion: 12 Oriente #408\nCol. San Francisco Puebla, Pue. CP 72000"),0,'C',false);
     $pdf->MultiCell(0,5,utf8_decode("Teléfono: 222 242 67 54"),0,'C',false);
     $pdf->MultiCell(0,5,utf8_decode("Email:antauestac@hotmail.com"),0,'C',false);
 
