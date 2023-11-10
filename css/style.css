@@ -245,14 +245,14 @@ body{
   }
   .widget p{
     display: inline-block;
-    line-height: 0.5em;
+    line-height: 0.6em;
     color: #fff;
   }
 
   .fecha{
     font-family: Oswald-regular;
     text-align: center;
-    font-size: 1em;
+    font-size: 1.3em;
     margin-bottom: 0.2em;
     background: rgba(0,0,0,.5);
     padding: 10px;
@@ -263,7 +263,7 @@ body{
       font-family: Alarm_clock;
       width: 100%;
       height: auto;
-      font-size: 2.5em;
+      font-size: 2.8em;
       text-align: center;
       background: rgba(0,0,0,.5);
       padding: 10px;
@@ -418,13 +418,24 @@ h2{
     font-size: 1.5em;
     font-family: monospace;
     color: #FFF;
-    margin-top: 20px;
-    margin-bottom: 55px;
+    margin-top: 30px;
+    margin-bottom: 30px;
 
 }
 .reimpresión_ticket input[type="submit"]{
-    margin-top: 35px;
+    margin-top: 5px;
     margin-bottom: 20px;
+}
+.reimpresión_ticket select{
+    width: 50%;
+    height: 25px;
+    border-radius: 5px;
+    background-color: #bdc3c7;
+    margin: 10px;
+    font-size: 1em;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
 }
 
 /****************************************BUSCAR_TICKET****************************************/
@@ -603,7 +614,13 @@ h2{
         font-size: 1.9em;
     }
     .reloj p{
-        font-size:3.5rem;
+        font-size:2em;
+    }
+    .reloj .segundos,
+    .reloj .ampm{
+    font-size: 0.7em;
+    display: block;
+    margin-top: 10px;
     }
     .navbar p{
         font-size: 1em;
@@ -655,9 +672,13 @@ h2{
         padding: 1em;
         font-size: 2.5em;
     }
-    .reloj{
-        font-size: 5em;
+    .reloj p{
+        font-size: 2.3em;
     }
+    .reloj .segundos,
+.reloj .ampm{
+  font-size: 0.9em;
+}
     .consultas_ticket{
         width: 40%;
     }
@@ -670,7 +691,10 @@ h2{
     }
     /*Index*/
     .grid-dashboard{
-        gap: 1.5em;
+        gap: 2em;
+    }
+    .navbar p{
+        font-size: 1.2em;
     }
     .consultas_ticket{
         width: 40%;
@@ -680,10 +704,10 @@ h2{
         width: 40%;
     }
     .fecha{
-        font-size: 1.9em;
+        font-size: 2.5em;
     }
     .reloj p{
-        font-size: 1.5em;
+        font-size: 3em;
     }
 
 }
