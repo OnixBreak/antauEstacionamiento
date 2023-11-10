@@ -24,14 +24,23 @@
     $placa_ticket = $rows_ticket['placa'] ;
     $tipo_auto = $rows_ticket['tipo_vehiculo'];
 
-    if($tipo_auto=="A"){
-        $tarifa_auto = 16;
-
+    switch($tipo_auto){
+        case "A":
+            $tarifa_auto = 16;
+            break;
+        case "B":
+            $tarifa_auto = 20;
+            break;
+        case "C":
+            $tarifa_auto = 30;
+            break;
+        case "D":
+            $tarifa_auto = 53;
+            break;
+        default:
+            $tarifa_auto = 16;
+            break;
     }
-    else{
-        $tarifa_auto = 20;
-    }
-
 
 	# Incluyendo librerias necesarias #
     require "./code128.php";

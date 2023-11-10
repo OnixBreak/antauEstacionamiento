@@ -11,12 +11,24 @@ $placas_salida = $_POST['tabla_placa'];
 $tipo_auto_salida = $_POST['tabla_tipo_vehiculo'];
 $hora_entrada_salida = $_POST['tabla_hora_entrada'];
 
-if($tipo_auto_salida == "A"){
-    $tarifaPorHora = 16;
+switch($tipo_auto_salida){
+    case "A":
+        $tarifaPorHora = 16;
+        break;
+    case "B":
+        $tarifaPorHora = 20;
+        break;
+    case "C":
+        $tarifaPorHora = 0;
+        break;
+    case "D":
+        $tarifaPorHora = 0;
+        break;
+    default:
+        $tarifaPorHora = 16;
+        break;
 }
-else{
-    $tarifaPorHora = 20;
-}
+
 
 
 //Prueba horas
@@ -51,6 +63,7 @@ $consulta = mysqli_query($conexion,$query);
 $rows = $consulta->fetch_assoc();
     $folio_registrar = $rows['folio_entradas'];
     $empleado_registro = $rows['empleado_registro'];
+    $usuario_cobro = $username;
     $fecha_entrada_registro = $rows['fecha_entrada'];
     $color_marca = $rows['color_marca'];
 $query_insert = "INSERT INTO
@@ -58,6 +71,7 @@ $query_insert = "INSERT INTO
                  (id_consecutivo,
                   folio_entrada,
                   atendio,
+                  usuario_cobro,
                   fecha_entrada,
                   hora_entrada,
                   color_marca,
@@ -69,6 +83,7 @@ $query_insert = "INSERT INTO
                   (NULL,
                   '$folio_registrar',
                   '$empleado_registro',
+                  '$usuario_cobro',
                   '$fecha_entrada_registro',
                   '$hora_entrada_salida',
                   '$color_marca',
