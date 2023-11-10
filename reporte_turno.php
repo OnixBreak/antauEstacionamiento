@@ -35,6 +35,7 @@ if(!isset($_SESSION['username'])){
                 <table id="datos_reporte">
                     <tr>
                         <th>Folio</th>
+                        <th>Atendió</th>
                         <th>Fecha Entrada</th>
                         <th>Hora Entrada</th>
                         <th>Hora Salida</th>
@@ -46,7 +47,7 @@ if(!isset($_SESSION['username'])){
                     <?php
             include 'php/conexion_back.php';
             $usuario = $_SESSION['username'];
-            $consulta_turno = "SELECT * FROM salidas WHERE atendio='$usuario'";
+            $consulta_turno = "SELECT * FROM salidas WHERE usuario_cobro='$usuario'";
             $result = mysqli_query($conexion,$consulta_turno);
             if ($result->num_rows > 0) {
                 $cantidad_campos = $result->num_rows;
@@ -57,6 +58,7 @@ if(!isset($_SESSION['username'])){
             ?>
             <tr>
                     <td><?php echo $row['folio_entrada']?></td>
+                    <td><?php echo $row['atendio']?></td>
                     <td><?php echo $row['fecha_entrada']?></td>
                     <td><?php echo $row['hora_entrada']?></td>
                     <td><?php echo $row['salida']?></td>
@@ -76,8 +78,8 @@ if(!isset($_SESSION['username'])){
         
         <div class="footer_turno">
         <button id="pdf_turno" class="btn">Generar PDF</button><a href="php/cerrar_sesion.php"><button class="btn" id="cerrar_sesionbtn" class="btn">Cerrar Sesión</button></a>
-            <p>Registros totales: <?php echo $cantidad_campos?></p>
-        <p>Dinero en caja: <?php echo '$ '.$suma.'.00';?></p>
+            <p id="p_regis">Registros: <?php echo $cantidad_campos?></p>
+        <p id="p_corte">Corte: <?php echo '$ '.$suma.'.00';?></p>
     
         </div>
     </div>
