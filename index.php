@@ -102,6 +102,10 @@ $usuario = $_SESSION['username'];
         <div class="reimpresión_ticket">
         <form  id="form_print"class="forms" action="php/ticket/reimprimir_ticket.php" method="POST">
             <label for="reimpresion">Reimprimir Ticket</label>
+            <select name="select_reimpresion" id="select_reimpresion">
+                <option value="entrada">Entrada</option>
+                <option value="salida">Salida</option>
+            </select>
             <input type="text" name="reimpresion" id="reimpresion" placeholder="Folio" autocomplete="off">
             <span id="print" class="warnings">Solo números</span>
             <input type="submit" value="Imprimir">
