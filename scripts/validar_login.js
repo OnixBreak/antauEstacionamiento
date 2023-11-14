@@ -17,6 +17,7 @@ usuario.addEventListener('blur', (e)=>{
     else{
         document.getElementById('username').style.color = "red";
         msguser.style.display = 'block';
+        e.preventDefault();
 
     }
 });
@@ -29,6 +30,7 @@ usuario.addEventListener('keyup', (e) =>{
     }
     else{
         document.getElementById('username').style.color = "red";
+        e.preventDefault();
 
     }
 });
@@ -41,6 +43,7 @@ pass.addEventListener('blur', (e) =>{
     else{
         document.getElementById('password').style.color = "red";
         msgpass.style.display = 'block';
+        e.preventDefault();
     }
 });
 
@@ -51,6 +54,7 @@ pass.addEventListener('keyup', (e)=>{
     }
     else{
         document.getElementById('password').style.color = "red";
+        e.preventDefault();
 
     }
 });
