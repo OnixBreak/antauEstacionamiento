@@ -12,9 +12,11 @@ if(!isset($_SESSION['username'])){
 $user_loged = $_SESSION['username'];
 include 'php/conexion_back.php';
 $nombre_usuario_logeado = mysqli_query($conexion,"SELECT nombreCompleto FROM usuarios WHERE usuario='$user_loged'");
+$cargo = mysqli_query($conexion,"SELECT cargo FROM usuarios WHERE usuario='$user_loged'");
 $ultimo_folio_registrado = mysqli_query($conexion,"SELECT MAX(folio_entradas) AS ultimo_folio FROM entradas");
 $row = $nombre_usuario_logeado -> fetch_assoc();
 $folio_ultimo = $ultimo_folio_registrado->fetch_assoc();
+$cargo_user = $cargo -> fetch_assoc();
 $folio_siguiente = intVal($folio_ultimo['ultimo_folio']) + 1;
 mysqli_close($conexion);
 $usuario = $_SESSION['username'];
@@ -34,6 +36,7 @@ $usuario = $_SESSION['username'];
         <navbar class="navbar">
             <img src="img/icono_inicio_sesion.jpg"/>
             <div class="Usuario_iniciado"><p  name="userLoged" id="userLoged">Atiende: <?php echo $row['nombreCompleto'];?></p>
+            <p id="cargo_index">Cargo: <?php echo $cargo_user['cargo'];?></p>
             <p>Folio Siguiente: <?php echo $folio_siguiente;?></p>
             </div>
             <img src="img/power.png" id="cerrar_sesion" alt="cerrar sesión">
@@ -82,7 +85,7 @@ $usuario = $_SESSION['username'];
         <div class="buscar_registro">
             <form class="forms" action="buscar_ticket.php" method="POST" name="form_validar" id="form_validar">
                 <p>Buscar Folio</p>
-                <input name="folio_a_buscar" id="folio_a_buscar" type="text" placeholder="Folio" autocomplete="off">
+                <input name="folio_a_buscar" id="folio_a_buscar" type="text" placeholder="Folio" autocomplete="off" autofocus>
                 <span id="val" class="warnings">Solo números!</span>
                 <input type="submit" value="Buscar">
             </form>
@@ -99,7 +102,7 @@ $usuario = $_SESSION['username'];
             <input type="submit" value="Buscar">
             </form>
         </div>
-        <div class="reimpresión_ticket">
+        <div class="reimpresión_ticket" id="grid_reimpresion">
         <form  id="form_print"class="forms" action="php/ticket/reimprimir_ticket.php" method="POST">
             <label for="reimpresion">Reimprimir Ticket</label>
             <select name="select_reimpresion" id="select_reimpresion">
