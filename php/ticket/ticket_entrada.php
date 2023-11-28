@@ -45,7 +45,7 @@
 	# Incluyendo librerias necesarias #
     require "./code128.php";
     $pdf = new PDF_Code128('P','mm',array(80,258));
-    $pdf->SetMargins(5,3,5);
+    $pdf->SetMargins(2,3,2);
     $pdf->AddPage();
     
     # Encabezado y datos de la empresa #
@@ -64,14 +64,14 @@
 
     # Codigo de barras #
     $centerX = $pdf->GetPageWidth() / 2;
-    $barcodeWidth = 25;
+    $barcodeWidth = 28;
     $barcodeHeight = 12;
     $barcodeX = $centerX - $barcodeWidth / 2;
     $barcodeY = $pdf->GetY();
     $pdf->Code128($barcodeX, $barcodeY, $folio, $barcodeWidth, $barcodeHeight);
 
     // Mover a la posición para el siguiente elemento (en este caso, a 15 unidades debajo del código de barras)
-    $pdf->SetXY(0, $pdf->GetY() + 13);
+    $pdf->SetXY(0, $pdf->GetY() + 12);
     $pdf->SetFont('Arial','',7);
     $pdf->MultiCell(0,3,utf8_decode($numeroAleatorio1.$folio.$numeroAleatorio2),0,'C',false);
     $pdf-> Ln(2);
@@ -93,8 +93,7 @@
     $pdf->Ln(5);
 
     $pdf->SetFont('Arial','',7);
-    $pdf->MultiCell(0,3,utf8_decode("ABRIMOS LOS 365 DIAS DEL AÑO.\nHORARIO\nLUNES A SÁBADO: 8:30 A 21:00 HRS."),0,'C');
-    $pdf->SetFont('Arial','B',7);
+    $pdf->MultiCell(0,4,utf8_decode("HORARIO\nLUNES A SÁBADO: 9:00 A 22:00 HRS."),0,'C');
     $pdf->MultiCell(0,3,utf8_decode("NO TENEMOS TIEMPO DE TOLERANCIA."),0,'C');
     $pdf->MultiCell(0,3,("COSTO POR BOLETO PERDIDO"),0,'C');
     $pdf->SetFont('Arial','B',8);
@@ -102,7 +101,7 @@
     $pdf->SetFont('Arial','B',7);
     $pdf->MultiCell(0,3,utf8_decode("(MÁS TIEMPO TRANSCURRIDO)"),0,'C');
 
-    $pdf->Ln(9);
+    $pdf->Ln(10);
 
     
     

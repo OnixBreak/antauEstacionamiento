@@ -61,7 +61,7 @@
     $pdf->MultiCell(0,3,utf8_decode("Placas: ".$placa_ticket),0,'J',false);
     $pdf->MultiCell(0,3,utf8_decode("Atiende : ".$atendio),0,'J',false);
     $pdf->SetFont('Arial','B',12);
-    $pdf->MultiCell(0,8,utf8_decode("Total $ ".$total_a_pagar.".00"),0,'R',false);
+    $pdf->MultiCell(0,8,utf8_decode("Total $ ".$total_a_pagar.".00   "),0,'R',false);
 
     $pdf->SetFont('Arial','',7);
 
@@ -70,7 +70,7 @@
     $pdf->Ln(3);
 
     $pdf->SetFont('Arial','',7);
-    $pdf->MultiCell(0,4,utf8_decode("ABRIMOS LOS 365 DIAS DEL AÑO.\nHORARIO\nLUNES A SÁBADO: 8:30 A 21:00 HRS."),0,'C');
+    $pdf->MultiCell(0,4,utf8_decode("HORARIO\nLUNES A SÁBADO: 9:00 A 22:00 HRS."),0,'C');
     $pdf->SetFont('Arial','B',7);
     $pdf->MultiCell(0,4,utf8_decode("NO TENEMOS TIEMPO DE TOLERANCIA."),0,'C');
     $pdf->MultiCell(0,4,("COSTO POR BOLETO PERDIDO"),0,'C');
@@ -79,7 +79,7 @@
     $pdf->SetFont('Arial','B',7);
     $pdf->MultiCell(0,4,utf8_decode("(MÁS TIEMPO TRANSCURRIDO)"),0,'C');
 
-    $pdf->Ln(2);
+    $pdf->Ln(10);
 
     
     
