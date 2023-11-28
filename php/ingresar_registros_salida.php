@@ -19,10 +19,10 @@ switch($tipo_auto_salida){
         $tarifaPorHora = 20;
         break;
     case "C":
-        $tarifaPorHora = 0;
+        $tarifaPorHora = 30;
         break;
     case "D":
-        $tarifaPorHora = 0;
+        $tarifaPorHora = 53;
         break;
     default:
         $tarifaPorHora = 16;
@@ -91,6 +91,32 @@ $query_insert = "INSERT INTO
                   '$tipo_auto_salida',
                   '$salida_auto_hora',
                   '$precioTotal')";
+$query_insert_respaldo = "INSERT INTO
+    respaldo
+        (id_respaldo,
+        res_id_folio,
+        fecha_registro,
+        res_hora_entrada,
+        res_hora_salida,
+        res_usuario_ingreso,
+        res_usuario_cobro,
+        res_placas,
+        res_color_marca,
+        res_tipo,
+        res_cobrado)
+        VALUES
+        (NULL,
+        '$folio_registrar',
+        '$fecha_entrada_registro',
+        '$hora_entrada_salida',
+        '$salida_auto_hora',
+        '$empleado_registro',
+        '$usuario_cobro',
+        '$placas_salida',
+        '$color_marca',
+        '$tipo_auto_salida',
+        '$precioTotal')";
+$insert_respaldo = mysqli_query($conexion,$query_insert_respaldo);
 $insert = mysqli_query($conexion,$query_insert);
 $delete = mysqli_query($conexion,$query_delete);
 if($insert){
