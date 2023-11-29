@@ -15,6 +15,12 @@ const form_validar = document.getElementById('form_validar');
 const folio_buscar = document.getElementById('folio_a_buscar');
 const form_print = document.getElementById('form_print');
 const folio_print = document.getElementById('reimpresion');
+const cargo = document.getElementById('cargo_index').innerHTML;
+if(cargo=="Cargo: Administrador"){
+    document.getElementById('grid_reimpresion').style.display = 'block'; 
+ 
+ }
+
 /*Esto convierte las teclas en matusculas*/
 function mayus(e) {
     e.value = e.value.toUpperCase();
@@ -112,7 +118,7 @@ form_print.addEventListener('submit', e=>{
  cerrar_sesion.addEventListener('click', e=>{
     var cerrar = window.confirm("Serás redireccionado al reporte del turno");
     if(cerrar == true){
-       window.location.href = "reporte_turno.php"; 
+       window.location.href = "reporte_turno.php";
     }
     else{
         e.preventDefault();
@@ -120,4 +126,5 @@ form_print.addEventListener('submit', e=>{
 
 
  });
+
 

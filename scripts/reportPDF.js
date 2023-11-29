@@ -2,9 +2,9 @@ const mexicoCityTimeZone = 'America/Mexico_City';
 const fecha_actual = new Date().toLocaleString('es-MX', { timeZone: mexicoCityTimeZone });
 
 var user = document.getElementById('usuario').innerHTML;
-var corte = document.getElementById('p_corte').innerHTML;
-var regist = document.getElementById('p_regis').innerHTML;
-document.getElementById('pdf_turno').addEventListener('click', function() {
+var corte = document.getElementById('p_corte').value;
+var regist = document.getElementById('p_regis').value;
+document.getElementById('formturno').addEventListener('submit', function() {
     const doc = new window.jspdf.jsPDF(); // Accede a jsPDF a través del objeto window
     const table = document.getElementById('datos_reporte');
 
@@ -46,7 +46,7 @@ document.getElementById('pdf_turno').addEventListener('click', function() {
         },
         
     });
-    doc.text(corte+'\n'+regist+'\n', 14, doc.autoTable.previous.finalY + 10);
+    doc.text("Corte: $"+corte+"\n"+"Registros: "+regist+"\n", 14, doc.autoTable.previous.finalY + 10);
 
     doc.save(user + " " + fecha_actual);
 });

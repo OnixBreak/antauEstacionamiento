@@ -48,6 +48,7 @@ pass.addEventListener('blur', (e) =>{
 });
 
 pass.addEventListener('keyup', (e)=>{
+
     if(expresiones.pass.test(pass.value)){
         document.getElementById('password').style.color = "#FFF";
         msgpass.style.display = 'none';
@@ -73,3 +74,6 @@ form.addEventListener('submit',e=>{
 }
     
 );
+function convertirAMinusculas(elemento) {
+    elemento.value = elemento.value.toLowerCase();
+}

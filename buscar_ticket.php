@@ -46,7 +46,7 @@ mysqli_close($conexion);
             </div>
             <div class="tabla_datos_validar">
                 <div class="consultas_ticket">
-                    <form  action="php/ingresar_registros_salida.php" method="POST">
+                    <form action="php/ingresar_registros_salida.php" method="POST">
                         
                                 <label for="tabla_folio">Folio</label>
                                 <input type="text" id="tabla_folio" name="tabla_folio" value="<?php echo $folio_a_buscar?>" readonly>
