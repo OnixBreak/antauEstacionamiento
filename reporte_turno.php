@@ -77,9 +77,15 @@ if(!isset($_SESSION['username'])){
         </div>
         
         <div class="footer_turno">
-        <button id="pdf_turno" class="btn">Generar PDF</button><a href="php/cerrar_sesion.php"><button class="btn" id="cerrar_sesionbtn" class="btn">Cerrar Sesión</button></a>
-            <p id="p_regis">Registros: <?php echo $cantidad_campos?></p>
-        <p id="p_corte">Corte: <?php echo '$ '.$suma.'.00';?></p>
+        <!--<button id="pdf_turno" class="btn">Generar PDF</button>-->
+            <form action="php/cerrar_sesion.php" method="POST" id="formturno">
+            <label for="p_regis">Autos registrados</label>
+                <input type="text" name="p_regis" id="p_regis" value="<?php echo $cantidad_campos?>" readonly/>
+            <label for="p_corte">Corte</label>
+                <input type="text" name="p_corte" id="p_corte" value="<?php echo $suma;?>" readonly/>
+               
+              <input type="submit" value="Cerrar sesión" class="btn" id="cerrar_sesionbtn">
+            </form>
     
         </div>
     </div>
