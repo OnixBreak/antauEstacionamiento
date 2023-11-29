@@ -179,7 +179,7 @@ body{
 /****************************************INDEX*****************************************/
 .grid-dashboard{   
     display: grid;
-    gap: 1em;
+    gap: 1.2em;
     grid-template-rows: 80px 150px 250px 250px 250px 250px;
     grid-template-areas: 
     "navbar"
@@ -384,7 +384,7 @@ input[type="submit"]:hover{
 
 .grid-consultas{
     display:grid;
-    grid-template-rows: 100px auto;
+    grid-template-rows: 350px 550px;
     grid-template-areas: 
     "titulos"
     "registros";
@@ -412,7 +412,8 @@ h2{
 }
 
 .reimpresión_ticket{
-    grid-area: reimpresion;
+    grid-area: reimpresion; /*No olvidar*/
+    display: none;
 }
 .reimpresión_ticket label{
     font-size: 1.5em;
@@ -445,7 +446,7 @@ h2{
     grid-template-areas:
     "titulo_validar_datos"
     "formulario_datos_validar";
-    grid-template-rows: 150px auto;
+    grid-template-rows: 30% 70%;
 
 }
 
@@ -469,7 +470,7 @@ h2{
     margin: 0 auto;
     text-align: center;
     display: block;
-    width: 90%;
+    width: 95%;
     background-color: rgba(0, 0, 0, 0.7);
 
 }
@@ -480,7 +481,9 @@ h2{
     font-size: 1.5em;
     font-weight: bold;
 }
-
+.registro_para_ingresar{
+    width: 95%
+}
 /****************************************BOLETO PERDIDO****************************************/
 .grid_boleto_perdido{
     display: grid;
@@ -630,9 +633,6 @@ h2{
 }
 
 @media ( min-width: 900px){
-    body{
-        overflow: hidden;
-    }
     .title_turno{
         font-size: 1em;
     }
@@ -659,8 +659,8 @@ h2{
     /*Index*/
     .grid-dashboard{
         
-        grid-template-rows: 70px 270px 270px;
-        gap: 10px;
+        grid-template-rows: 90px 270px 280px;
+        gap: 15px;
         grid-template-areas:
         "navbar navbar navbar navbar"
         "reloj reloj reloj reloj"
