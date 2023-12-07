@@ -40,6 +40,7 @@ $usuario = $_SESSION['username'];
             <p>Folio Siguiente: <?php echo $folio_siguiente;?></p>
             </div>
             <img src="img/power.png" id="cerrar_sesion" alt="cerrar sesión">
+            <a class="info" href="acercade.html">A cerca de...</a>
         </navbar>
         <div class="wrap">
             <div class="widget">

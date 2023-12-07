@@ -37,6 +37,19 @@ body{
     padding-top:1px;
     margin-top: 0;
 }
+
+.info{
+    right: 20px;
+    top: 60px;
+    position: absolute;
+    text-decoration: none;
+    color: #FFF;
+
+}
+.info:hover{
+    color: #ababab;
+}
+
 .btn_regresar img{
     position: absolute;
     background-color: rgba(0, 0, 0, 0.7);
@@ -608,6 +621,9 @@ h2{
     .tabla_registros_devueltos{
         width: 70%;
     }
+    .info{
+        top: 70px;
+    }
     /*obtener_datos*/
     .consultas_ticket{
         width: 60%;
@@ -727,3 +743,5 @@ h2{
     }
 
 }
+
+    
