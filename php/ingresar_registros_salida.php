@@ -10,6 +10,7 @@ $folio_salida = $_POST['tabla_folio'];
 $placas_salida = $_POST['tabla_placa'];
 $tipo_auto_salida = $_POST['tabla_tipo_vehiculo'];
 $hora_entrada_salida = $_POST['tabla_hora_entrada'];
+$_SESSION['tabla_folio'] = $folio_salida;
 
 switch($tipo_auto_salida){
     case "A":

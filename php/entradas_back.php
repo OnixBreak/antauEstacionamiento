@@ -9,7 +9,7 @@ $placa_auto = $_POST['placAuto'];
 $tipo_auto = $_POST['tipVehiculo'];
 $color_marca = $_POST['color_marca'];
 $usuario = $_SESSION['username'];
-
+$_SESSION['placAuto'] = $placa_auto;
 $query = "INSERT INTO entradas( folio_entradas, empleado_registro, fecha_entrada, hora_entrada, color_marca,  placa, tipo_vehiculo) VALUES
 (NULL,'$usuario', CURRENT_DATE, CURRENT_TIME, '$color_marca', '$placa_auto','$tipo_auto')";
 $registrar_entrada = mysqli_query($conexion, $query);

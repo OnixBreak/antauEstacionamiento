@@ -103,7 +103,7 @@
     $pdf->Ln(5);
 
     $pdf->SetFont('Arial','',7);
-    $pdf->MultiCell(0,4,utf8_decode("HORARIO\nLUNES A SÁBADO: 9:00 A 22:00 HRS."),0,'C');
+    $pdf->MultiCell(0,4,utf8_decode("HORARIO\nLUNES A SÁBADO: 9:00 A 20:00 HRS."),0,'C');
     $pdf->SetFont('Arial','B',7);
     $pdf->MultiCell(0,3,utf8_decode("NO TENEMOS TIEMPO DE TOLERANCIA."),0,'C');
     $pdf->MultiCell(0,3,("COSTO POR BOLETO PERDIDO"),0,'C');
@@ -182,7 +182,7 @@
     $pdf->Ln(3);
 
     $pdf->SetFont('Arial','',7);
-    $pdf->MultiCell(0,4,utf8_decode("HORARIO\nLUNES A SÁBADO: 9:00 A 22:00 HRS."),0,'C');
+    $pdf->MultiCell(0,4,utf8_decode("HORARIO\nLUNES A SÁBADO: 9:00 A 20:00 HRS."),0,'C');
     $pdf->SetFont('Arial','B',7);
     $pdf->MultiCell(0,4,utf8_decode("NO TENEMOS TIEMPO DE TOLERANCIA."),0,'C');
     $pdf->MultiCell(0,4,("COSTO POR BOLETO PERDIDO"),0,'C');

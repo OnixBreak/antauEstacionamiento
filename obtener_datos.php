@@ -4,7 +4,7 @@ if(!isset($_SESSION['username'])){
   echo '
     <script>
     alert("Tienes que iniciar sesión!");
-    window.location = "index.php";
+    window.location = "login.php";
     </script>
     ';
     session_destroy();

@@ -1,4 +1,4 @@
-<?php
+<!--<?php
 session_start();
 if(!isset($_SESSION['username'])){
   echo '
@@ -10,6 +10,7 @@ if(!isset($_SESSION['username'])){
     die(); 
 }
 ?>
+-->
 <!DOCTYPE html>
 <html lang="es-MX">
 <head>

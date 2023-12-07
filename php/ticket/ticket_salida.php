@@ -6,16 +6,19 @@
         die();
 
     }
+    if(!isset($_SESSION['tabla_folio'])){
+        echo "<script>
+        alert('No se encontró el registro!');
+        window.location = '.../index.php';
+        </script>";
+    }
+    $folio_index = $_SESSION['tabla_folio'];
+
 
 
     include '../conexion_back.php';
-    $query_folio = "SELECT MAX(id_consecutivo) AS folio_salidabd FROM salidas";
-    $folio_ticket = mysqli_query($conexion,$query_folio);
 
-    $row_folio = $folio_ticket->fetch_assoc();
-    $consecutivo_bd = $row_folio['folio_salidabd'];
-
-    $query_ticket_registrado = "SELECT * FROM salidas WHERE id_consecutivo='$consecutivo_bd'";
+    $query_ticket_registrado = "SELECT * FROM salidas WHERE folio_entrada='$folio_index'";
     $ticket_registrado_salida = mysqli_query($conexion,$query_ticket_registrado);
     $rows_ticket_salida = $ticket_registrado_salida->fetch_assoc();
 
