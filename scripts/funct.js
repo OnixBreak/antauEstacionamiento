@@ -1,8 +1,8 @@
 const expresiones =
 {
-  placas: /^[a-zA-Z0-9]{4,16}$/,
-  modelo: /^[A-Z 0-9]{1,20}$/,
-  folio: /^[0-9]{1,10}$/
+  placas: /^[a-zA-Z0-9]{4,25}$/,
+  modelo: /^[A-Z 0-9]{1,25}$/,
+  folio: /^[0-9]{1,100}$/
 }
 
 
