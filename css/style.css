@@ -525,7 +525,7 @@ h2{
 .grid_reporte{
     display: grid;
     gap: 1em;
-    grid-template-rows: 10em 15em 10em;
+    grid-template-rows: 11em 15em 13em;
     grid-template-areas: 
     "titulo_turno"
     "registros_turno"
@@ -572,14 +572,30 @@ h2{
     text-align: center;
     border: 1px solid #000;
 }
+
 .footer_turno{
+    background-color: rgba(0, 0, 0, 0.7);
     grid-area: footer_turno;
     text-align: center;
     font-family: oswald;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: bold;
     color: #fff;
 }
+
+.footer_turno label{
+    display: block;
+}
+.footer_turno input[type="text"]{
+    text-align: center;
+    border: none;
+}
+.footer_turno input[type="submit"]{
+    display: block;
+    margin: 0 auto;
+    width: 250px;
+}
+
 
 
 
@@ -602,7 +618,7 @@ h2{
         font-size: 1.2em;
     }
     .grid_reporte{
-        grid-template-rows: auto 13em 10em;
+        grid-template-rows: auto 14em 14em;
     }
     /*index*/
     .grid-dashboard{
