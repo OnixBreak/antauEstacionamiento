@@ -5,7 +5,8 @@ var user = document.getElementById('usuario').innerHTML;
 var corte = document.getElementById('p_corte').value;
 var regist = document.getElementById('p_regis').value;
 document.getElementById('formturno').addEventListener('submit', function() {
-    const doc = new window.jspdf.jsPDF(); // Accede a jsPDF a través del objeto window
+    if(corte>0){
+        const doc = new window.jspdf.jsPDF(); // Accede a jsPDF a través del objeto window
     const table = document.getElementById('datos_reporte');
 
     // Obtén el contenido de la tabla
@@ -49,4 +50,6 @@ document.getElementById('formturno').addEventListener('submit', function() {
     doc.text("Corte: $"+corte+"\n"+"Registros: "+regist+"\n", 14, doc.autoTable.previous.finalY + 10);
 
     doc.save(user + " " + fecha_actual);
+
+    }
 });
