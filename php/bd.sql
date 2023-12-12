@@ -38,6 +38,8 @@ CREATE TABLE salidas (
 CREATE TABLE cortes (
   'id_corte' int NOT NULL PRIMARY KEY AUTO_INCREMENT,
   'usuario_corte' varchar(50) NOT NULL,
+  'fecha_corte' varchar(25) NOT NULL,
+  'hora_corte' varchar(25) NOT NULL,
   'autos_ingresados' int NOT NULL,
   'dinero_corte' int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
