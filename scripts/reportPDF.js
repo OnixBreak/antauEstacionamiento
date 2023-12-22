@@ -49,7 +49,7 @@ document.getElementById('formturno').addEventListener('submit', function() {
     });
     doc.text("Corte: $"+corte+"\n"+"Registros: "+regist+"\n", 14, doc.autoTable.previous.finalY + 10);
 
-    doc.save(user + " " + fecha_actual);
+    doc.save(user + " " + fecha_actual+".pdf");
 
     }
 });
