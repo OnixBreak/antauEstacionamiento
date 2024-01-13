@@ -70,6 +70,7 @@ body{
 }
 
 
+
 /****************************************Login****************************************/
 .grid_inicio_sesion{   
     display: grid;
@@ -151,18 +152,38 @@ body{
 
 
 }
+
+.pass_cont{
+    display: flex;
+    align-items: center;
+
+}
+
+.bx{
+    font-size: 30px;
+    cursor: pointer;
+    position: relative;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    float: left;
+    width: 36px;
+    height: 24px;
+    left: -55px;
+    top: -15px;
+}
+
 .inicio_sesion input[type="password"]{
-    margin: 0 auto;
     display: block;
+    margin: 0 auto;
     outline: none;
     border: none;
-    width: 80%;
+    width: 75%;
     height: 40px;
     background-color: transparent;
     border-bottom: 1px solid #FFF;
     margin-bottom: 25px;
     font-size: 2em;
-    box-shadow: rgba(0, 0, 0, 0.2) 0  4px 6px;
     color: #FFF;
 
 
