@@ -113,5 +113,5 @@
     
     
     # Nombre del archivo PDF #
-    $pdf->Output("I", "Folio ".$folio.".pdf");
+    $pdf->Output("I","Folio ".$folio,true);
     ?>
