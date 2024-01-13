@@ -77,3 +77,22 @@ form.addEventListener('submit',e=>{
 function convertirAMinusculas(elemento) {
     elemento.value = elemento.value.toLowerCase();
 }
+
+const pass_funct = document.getElementById('password'),
+      icon =document.querySelector('.bx');
+
+icon.addEventListener("click", e=>{
+
+    if(pass_funct.type === "password"){
+        pass_funct.type="text";
+        icon.classList.remove('bx-show-alt');
+        icon.classList.add('bx-hide');
+
+    }else{
+        pass_funct.type ="password";
+        icon.classList.remove('bx-hide');
+        icon.classList.add('bx-show-alt');
+    }
+
+}
+);
