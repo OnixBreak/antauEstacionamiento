@@ -18,9 +18,8 @@ if(isset($_SESSION['username'])){
 <body>
     
     <div class="grid-inicio_sesion">
-        <div class="custom-alert">
-            <span class="close-btn">&times;</span>
-            <p id="alert-message"></p>
+        <div class="titulo_login">
+            <p>Antau Estacionamiento</p>
         </div>
     <div class="inicio_sesion">
         <form action="php/login_back.php" method="POST" id="form_login" name="form_login">

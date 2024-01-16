@@ -29,6 +29,16 @@ body{
 
 
 }
+.titulo_login{
+    display: block;
+    color: #FFF;
+    text-align: center;
+    font-family: oswald;
+    font-weight: bold;
+    font-size: 2em;
+    margin-top: 0.5em;
+    
+}
 .warnings{
     display: none;
     text-align: center;
